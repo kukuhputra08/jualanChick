@@ -1,0 +1,334 @@
+:root{
+    --primary: rgb(151, 49, 49);
+    --warna1: rgb(224, 167, 94);
+    --warna2: #F9D689;
+    --warna3: #F5E7B2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--warna1);
+    color: var(--warna3);
+    min-height: 2000px;
+}
+
+/* navbar */
+.navbar{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    border-bottom: 1px solid var(--warna3);
+    background: rgba(151, 49, 49, 0.5);
+    backdrop-filter: blur(30px);
+    border-radius: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--warna3);
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color: var(--warna1);
+    font-style: normal;
+}
+
+.navbar .navbar-nav a{
+    color: var(--warna3);
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--warna1);
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--warna3);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scale(0.5);
+}
+
+.navbar .navbar-hamburger a{
+    color: var(--warna3);
+    margin: 0.5rem;
+}
+
+.navbar .navbar-hamburger a:hover{
+    color: var(--warna1);
+    transition: 0.3s linear;
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/* content */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(https://cdn.idntimes.com/content-images/community/2017/08/salted-egg-chicken-9f3ab251a6dc54adbd6e6ecdccc57811_600x400.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(224, 167, 94,1) 10%,rgba(255,255,255,0)60%);
+}
+
+.hero .content{
+    padding: 1.4rem 7%;
+    
+    position: absolute;
+    background: rgba(151, 49, 49, 0.5);
+    backdrop-filter: blur(30px);
+}
+
+.hero .content h1{
+    font-size: 6rem;
+    color: var(--warna3);
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    font-style: italic;
+    
+}
+.hero .content span{
+    color: var(--warna1);
+}
+
+.hero .content p{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 2.5rem;
+    color: var(--warna3);
+    font-weight: 300;
+    
+}
+
+.hero .content a{
+    margin: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--primary);
+    color: var(--warna2);
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow:  1px 1px 3px rgba(1,1,3,0.5);
+}
+
+/* about section */
+
+.about{
+    padding: 1.4rem 7%;
+    /* width: 200px; */
+}
+.about h2{
+    background-color: var(--primary);
+    padding: 1rem;
+    text-align: center ;
+    border-radius: 1rem; 
+    margin-bottom: 3rem;
+}
+.about p{
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+
+
+/* menu section */
+.menu-khas{
+    padding: 1.4rem 7%;
+    background-color: var(--primary);
+    height: 500px;
+}
+.menu-khas h2{
+    margin-top: 3.5rem;
+    text-align: center ; 
+    font-size: 2.6rem;
+}
+
+.menu-khas p{
+    font-weight: 100;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 4rem;
+}
+
+.menu-khas .menu1{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    background: rgba(224, 167, 94, 0.5);
+    backdrop-filter: blur(40px);
+    box-shadow:  1px 1px 3px rgba(1,1,3,0.5);
+    border-radius: 15px;
+}
+.menu-khas .menu1 table{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.menu-khas .menu1 img{
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.menu-khas .menu1 .menu-jenis{
+    color: var(--warna3);
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.menu-khas .menu1 .harga-menu1{
+    padding: 20px;
+    color: aliceblue;
+    align-items: self-end;
+    font-weight: 100;
+}
+
+.menu-khas .daftar-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 10px;
+}
+
+.menu-khas .menu2{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    background: rgba(224, 167, 94, 0.5);
+    backdrop-filter: blur(40px);
+    box-shadow:  1px 1px 3px rgba(1,1,3,0.5);
+    border-radius: 15px;
+}
+.menu-khas .menu2 table{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.menu-khas .menu2 img{
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.menu-khas .menu2 .menu-jenis{
+    color: var(--warna3);
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.menu-khas .menu2 .harga-menu1{
+    padding: 20px;
+    color: aliceblue;
+    align-items: self-end;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+/* media desktop */
+@media (max-width: 1366px){
+    html{
+        font-size: 75%;
+    }
+}
+
+/* media tab */
+@media (max-width: 768px){
+    html{
+        font-size: 60%;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav{
+       position: absolute;
+       top: 100%;
+       right: -100%;
+       background-color: var(--primary);
+       width: 30rem;
+       height: 100vh;
+       transition: right 0.3s ease;
+    }
+
+    .navbar .navbar-nav.active{
+       right: 0;
+    }
+
+    .navbar .navbar-nav a{
+        display: block;
+        margin: 1.5rem;
+        border-bottom: 1px solid var(--warna1);
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover:after{
+        transform: scale(0.2);
+    }
+  
+}
+
+/* media hp */
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
